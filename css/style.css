@@ -1,253 +1,243 @@
+/* ===== CONFIGURACIÓN GENERAL ===== */
+
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
 }
 
 
 html{
-    scroll-behavior:smooth;
+    scroll-behavior: smooth;
 }
 
 
 body{
-    color:#333;
-    background:#fff;
+    background-color: #f8f8f8;
+    color: #333;
 }
 
 
+/* ===== HEADER ===== */
 
 header{
-
-    background:#ffffff;
-    padding:20px 8%;
-    box-shadow:0 3px 10px #ddd;
-
-    position:sticky;
-    top:0;
-    z-index:10;
-
+    background-color: #7ac7c4;
+    padding: 15px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
-
 
 
 nav{
-
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-
 
 
 nav h1{
+    color: white;
+    font-size: 32px;
+}
 
-    color:#8b5e3c;
-    font-size:30px;
 
+nav ul{
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+
+nav ul li a:hover{
+    color: #ffdf8a;
 }
 
 
 
-ul{
-
-    display:flex;
-    gap:25px;
-    list-style:none;
-
-}
-
-
-
-a{
-
-    text-decoration:none;
-    color:#333;
-    font-weight:bold;
-
-}
-
-
+/* ===== INICIO ===== */
 
 .inicio{
+    height: 500px;
+    background-image: linear-gradient(
+        rgba(0,0,0,0.4),
+        rgba(0,0,0,0.4)
+    ), url("img/fondo.jpg");
 
-height:80vh;
+    background-size: cover;
+    background-position: center;
 
-background:
-linear-gradient(
-rgba(0,0,0,.4),
-rgba(0,0,0,.4)
-),
-url("img/fondo.jpg");
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-background-size:cover;
-background-position:center;
-
-display:flex;
-align-items:center;
-padding:10%;
-
-color:white;
-
+    text-align: center;
+    color: white;
 }
-
 
 
 .texto-inicio{
-
-max-width:500px;
-
+    max-width: 700px;
 }
-
 
 
 .texto-inicio h2{
+    font-size: 45px;
+    margin-bottom: 20px;
+}
 
-font-size:45px;
-margin-bottom:20px;
 
+.texto-inicio p{
+    font-size: 20px;
+    margin-bottom: 30px;
 }
 
 
 
-.boton,
-button{
-
-background:#d99035;
-color:white;
-
-padding:14px 30px;
-
-border:none;
-border-radius:30px;
-
-cursor:pointer;
-
-margin-top:20px;
-
+.boton{
+    background-color: #ff9f68;
+    color:white;
+    padding: 14px 30px;
+    border-radius: 30px;
+    text-decoration:none;
+    font-weight:bold;
 }
 
 
+
+/* ===== SECCIONES ===== */
 
 section{
-
-padding:70px 10%;
-text-align:center;
-
+    padding: 60px 40px;
+    text-align:center;
 }
 
 
+section h2{
+    font-size: 35px;
+    color:#4b7f7d;
+    margin-bottom:25px;
+}
+
+
+/* ===== TARJETAS MASCOTAS ===== */
 
 .cards{
-
-display:flex;
-justify-content:center;
-gap:30px;
-margin-top:40px;
-
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
 }
-
 
 
 .card{
-
-background:white;
-width:280px;
-
-padding:20px;
-
-border-radius:20px;
-
-box-shadow:0 5px 20px #ddd;
-
+    background:white;
+    width:280px;
+    padding:20px;
+    border-radius:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.15);
 }
-
 
 
 .card img{
-
-width:100%;
-height:220px;
-object-fit:cover;
-
-border-radius:15px;
-
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:15px;
 }
 
 
+.card h3{
+    margin:15px 0;
+    color:#555;
+}
+
+
+.card button,
+.adopta button,
+.donar{
+
+    background:#ff9f68;
+    color:white;
+
+    border:none;
+    padding:12px 25px;
+
+    border-radius:25px;
+
+    cursor:pointer;
+    margin-top:15px;
+
+    font-weight:bold;
+}
+
+
+
+/* ===== ADOPTA ===== */
 
 .adopta{
-
-background:#fff5e6;
-
+    background:#fff3dc;
 }
 
 
+
+/* ===== DONACIONES ===== */
 
 .donaciones{
-
-background:#fff8ef;
-
+    background:#e9f7f6;
 }
-
 
 
 .donacion-container{
 
-display:flex;
-justify-content:center;
-gap:30px;
-
-margin-top:40px;
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
 
 }
-
 
 
 .donacion-card{
 
-background:white;
+    background:white;
+    width:250px;
+    padding:25px;
 
-width:280px;
+    border-radius:20px;
 
-padding:30px;
-
-border-radius:20px;
-
-box-shadow:0 5px 15px #ddd;
-
-transition:.3s;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
 
 }
 
 
 
-.donacion-card:hover{
+/* ===== CONTACTO ===== */
 
-transform:translateY(-10px);
-
+#contacto{
+    background:white;
 }
 
 
 
-.donar{
-
-font-size:18px;
-
-}
-
-
+/* ===== FOOTER ===== */
 
 footer{
 
-background:#8b5e3c;
+    background:#333;
+    color:white;
 
-color:white;
+    padding:25px;
 
-padding:25px;
-
-text-align:center;
+    text-align:center;
 
 }
