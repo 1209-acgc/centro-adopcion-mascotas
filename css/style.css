@@ -1,14 +1,15 @@
 /* ===========================
-   PALETA DE COLORES
+   VARIABLES
 =========================== */
 
 :root{
-    --naranja:#FFA45B;
-    --amarillo:#FFDA77;
-    --crema:#FBF6F0;
-    --celeste:#AEE6E6;
-    --texto:#333;
-    --blanco:#ffffff;
+    --color-principal:#2E8B8B;
+    --color-secundario:#4CAF50;
+    --color-fondo:#F5F7FA;
+    --color-blanco:#FFFFFF;
+    --color-texto:#333333;
+    --color-boton:#2E8B8B;
+    --color-boton-hover:#256d6d;
 }
 
 /* ===========================
@@ -19,12 +20,13 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
 }
 
 body{
-    background:var(--crema);
-    color:var(--texto);
+    font-family:Arial, Helvetica, sans-serif;
+    background:var(--color-fondo);
+    color:var(--color-texto);
+    line-height:1.6;
 }
 
 a{
@@ -39,271 +41,211 @@ ul{
    NAVBAR
 =========================== */
 
-.navbar{
+header{
+    background:var(--color-principal);
+    padding:18px 60px;
+}
 
+.navbar{
     display:flex;
     justify-content:space-between;
     align-items:center;
-
-    padding:20px 8%;
-
-    background:white;
-
-    position:sticky;
-    top:0;
-    z-index:1000;
-
-    box-shadow:0 5px 15px rgba(0,0,0,.08);
-
 }
 
-.logo{
-
-    color:var(--naranja);
+.navbar h1{
+    color:white;
     font-size:30px;
-    font-weight:bold;
-
 }
 
 .navbar ul{
-
     display:flex;
-    gap:35px;
-
+    gap:25px;
 }
 
-.navbar a{
-
-    color:#444;
-    font-weight:500;
+.navbar ul li a{
+    color:white;
+    font-weight:bold;
     transition:.3s;
-
 }
 
-.navbar a:hover{
-
-    color:var(--naranja);
-
+.navbar ul li a:hover{
+    color:#d8f3f3;
 }
 
 /* ===========================
-   HERO
+   CONTENIDO
 =========================== */
 
-.hero{
-
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-
-    padding:80px 8%;
-
+main{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    padding:50px 0;
 }
 
-.hero-text{
-
-    width:50%;
-
+.inicio{
+    text-align:center;
+    padding:80px 20px;
 }
 
-.hero-text h1{
-
-    font-size:55px;
+.inicio h2{
+    font-size:42px;
     margin-bottom:20px;
-
 }
 
-.hero-text p{
-
-    font-size:18px;
-    line-height:30px;
-    margin-bottom:35px;
-
+.inicio p{
+    max-width:700px;
+    margin:auto;
+    margin-bottom:30px;
 }
 
-.hero-img{
-
-    width:45%;
-
-}
-
-.hero-img img{
-
-    width:100%;
-
-}
+/* ===========================
+   BOTÓN
+=========================== */
 
 .btn{
-
-    background:var(--naranja);
+    display:inline-block;
+    background:var(--color-boton);
     color:white;
-
-    padding:15px 35px;
-
-    border-radius:40px;
-
+    padding:12px 28px;
+    border-radius:8px;
     transition:.3s;
-
 }
 
 .btn:hover{
-
-    background:#ff8e38;
-
+    background:var(--color-boton-hover);
 }
 
 /* ===========================
-   MASCOTAS
+   SECCIONES
 =========================== */
 
-.destacados{
-
-    padding:80px 8%;
-
-}
-
-.destacados h2{
-
+.pagina{
     text-align:center;
-    margin-bottom:50px;
-    font-size:38px;
-
 }
+
+.pagina h2{
+    font-size:34px;
+    margin-bottom:15px;
+}
+
+.pagina p{
+    margin-bottom:25px;
+}
+
+/* ===========================
+   TARJETAS
+=========================== */
 
 .cards{
-
     display:flex;
+    justify-content:center;
     gap:30px;
-
+    flex-wrap:wrap;
+    margin-top:30px;
 }
 
 .card{
-
     background:white;
-
-    border-radius:20px;
-
+    width:300px;
+    border-radius:12px;
     overflow:hidden;
-
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
-
-    transition:.3s;
-
-    flex:1;
-
-}
-
-.card:hover{
-
-    transform:translateY(-10px);
-
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+    padding-bottom:20px;
 }
 
 .card img{
-
     width:100%;
     height:250px;
     object-fit:cover;
-
 }
 
 .card h3{
-
-    margin-top:20px;
-    text-align:center;
-
+    margin-top:18px;
+    margin-bottom:10px;
 }
 
 .card p{
-
-    padding:10px 25px;
-    text-align:center;
-
-}
-
-.btn-card{
-
-    display:block;
-
-    width:160px;
-
-    margin:20px auto 30px;
-
-    background:var(--celeste);
-
-    color:#333;
-
-    text-align:center;
-
-    padding:12px;
-
-    border-radius:30px;
-
-    font-weight:600;
-
-}
-
-.btn-card:hover{
-
-    background:var(--naranja);
-    color:white;
-
+    padding:0 20px;
+    margin-bottom:18px;
 }
 
 /* ===========================
-   BENEFICIOS
+   FORMULARIOS
 =========================== */
 
-.beneficios{
-
-    padding:80px 8%;
-
-}
-
-.beneficios h2{
-
-    text-align:center;
-    margin-bottom:45px;
-
-}
-
-.contenedor-beneficios{
-
+.formulario{
+    width:100%;
+    max-width:600px;
+    margin:40px auto;
     display:flex;
-    gap:30px;
-
+    flex-direction:column;
+    gap:15px;
 }
 
-.beneficio{
-
-    background:white;
-
-    flex:1;
-
-    border-radius:20px;
-
-    padding:40px;
-
-    text-align:center;
-
-    box-shadow:0 10px 20px rgba(0,0,0,.08);
-
+.formulario label{
+    text-align:left;
+    font-weight:bold;
 }
 
-.beneficio i{
+.formulario input,
+.formulario select,
+.formulario textarea{
 
-    font-size:55px;
-
-    color:var(--naranja);
-
-    margin-bottom:20px;
-
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:16px;
 }
 
-.beneficio h3{
+.formulario button{
 
-    margin-bottom:15px;
+    border:none;
+    cursor:pointer;
+    font-size:16px;
+}
 
+/* ===========================
+   NOSOTROS
+=========================== */
+
+.nosotros{
+    background: var(--color-blanco);
+    margin-top: 50px;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,.08);
+    text-align: center;
+}
+
+.nosotros h2{
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+
+.nosotros p{
+    max-width: 800px;
+    margin: auto;
+}
+
+/* ===========================
+   INFORMACIÓN DE CONTACTO
+=========================== */
+
+.informacion{
+    background: var(--color-blanco);
+    margin-top: 40px;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,.08);
+}
+
+.informacion h3{
+    margin-bottom: 15px;
+}
+
+.informacion p{
+    margin: 8px 0;
 }
 
 /* ===========================
@@ -311,381 +253,49 @@ ul{
 =========================== */
 
 footer{
-
-    background:#333;
-
-    color:white;
-
-    text-align:center;
-
-    padding:50px;
-
-}
-
-footer h2{
-
-    margin-bottom:15px;
-
-}
-
-footer p{
-
-    margin:8px;
-
-}
-
-.redes{
-
-    margin-top:20px;
-
-}
-
-.redes i{
-
-    font-size:25px;
-
-    margin:10px;
-
-    cursor:pointer;
-
-}
-
-.redes i:hover{
-
-    color:var(--amarillo);
-
+    background: var(--color-principal);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 60px;
 }
 
 /* ===========================
    RESPONSIVE
 =========================== */
 
-@media(max-width:900px){
-
-.hero{
-
-flex-direction:column;
-
-}
-
-.hero-text{
-
-width:100%;
-text-align:center;
-
-}
-
-.hero-img{
-
-width:90%;
-margin-top:40px;
-
-}
-
-.cards{
-
-flex-direction:column;
-
-}
-
-.contenedor-beneficios{
-
-flex-direction:column;
-
-}
-
-.navbar{
-
-flex-direction:column;
-gap:20px;
-
-}
-
-.navbar ul{
-
-flex-direction:column;
-text-align:center;
-
-}
-
-}
-
-/*=========================
-PROCESO DE ADOPCIÓN
-=========================*/
-
-.pasos{
-
-padding:70px 10%;
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-
-gap:25px;
-
-}
-
-.paso{
-
-background:white;
-
-padding:30px;
-
-border-radius:18px;
-
-box-shadow:0 10px 20px rgba(0,0,0,.08);
-
-text-align:center;
-
-}
-
-.paso h2{
-
-color:var(--naranja);
-
-margin-bottom:15px;
-
-}
-
-/*=========================
-FORMULARIO
-=========================*/
-
-.formulario{
-
-padding:80px 10%;
-
-}
-
-.formulario h2{
-
-text-align:center;
-
-margin-bottom:40px;
-
-}
-
-form{
-
-max-width:700px;
-
-margin:auto;
-
-display:flex;
-
-flex-direction:column;
-
-gap:20px;
-
-}
-
-form input,
-form select,
-form textarea{
-
-padding:15px;
-
-border:2px solid #ddd;
-
-border-radius:12px;
-
-font-size:16px;
-
-outline:none;
-
-}
-
-form input:focus,
-form select:focus,
-form textarea:focus{
-
-border-color:var(--naranja);
-
-}
-
-form button{
-
-border:none;
-
-cursor:pointer;
-
-font-size:17px;
-
-}
-
-/*=========================
-DONACIONES
-=========================*/
-
-.donaciones{
-
-padding:70px 10%;
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-
-gap:30px;
-
-}
-
-.donacion-card{
-
-background:white;
-
-padding:35px;
-
-border-radius:20px;
-
-box-shadow:0 10px 20px rgba(0,0,0,.08);
-
-text-align:center;
-
-transition:.3s;
-
-}
-
-.donacion-card:hover{
-
-transform:translateY(-8px);
-
-}
-
-.donacion-card h2{
-
-color:var(--naranja);
-
-margin-bottom:20px;
-
-}
-
-.donacion-card p{
-
-margin-bottom:25px;
-
-line-height:28px;
-
-}
-
-.datos-donacion{
-
-padding:70px 10%;
-
-text-align:center;
-
-}
-
-.datos-donacion h2{
-
-margin-bottom:25px;
-
-color:var(--naranja);
-
-}
-
-.datos-donacion p{
-
-font-size:18px;
-
-margin:15px 0;
-
-}
-
-/*=========================
-CONTACTO
-=========================*/
-
-.contacto{
-
-padding:80px 10%;
-
-display:grid;
-
-grid-template-columns:1fr 1fr;
-
-gap:40px;
-
-}
-
-.info-contacto{
-
-background:white;
-
-padding:40px;
-
-border-radius:20px;
-
-box-shadow:0 10px 20px rgba(0,0,0,.08);
-
-}
-
-.info-contacto h2{
-
-color:var(--naranja);
-
-margin-bottom:25px;
-
-}
-
-.info-contacto p{
-
-margin:18px 0;
-
-font-size:17px;
-
-}
-
-.form-contacto{
-
-background:white;
-
-padding:40px;
-
-border-radius:20px;
-
-box-shadow:0 10px 20px rgba(0,0,0,.08);
-
-}
-
-.form-contacto form{
-
-display:flex;
-
-flex-direction:column;
-
-gap:20px;
-
-}
-
-.form-contacto input,
-.form-contacto textarea{
-
-padding:15px;
-
-border:2px solid #ddd;
-
-border-radius:10px;
-
-font-size:16px;
-
-outline:none;
-
-}
-
-.form-contacto input:focus,
-.form-contacto textarea:focus{
-
-border-color:var(--naranja);
-
-}
-
-@media(max-width:900px){
-
-.contacto{
-
-grid-template-columns:1fr;
-
-}
-
+@media (max-width: 768px){
+
+    .navbar{
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navbar ul{
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .inicio h2{
+        font-size: 30px;
+    }
+
+    .cards{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card{
+        width: 90%;
+        max-width: 350px;
+    }
+
+    main{
+        width: 95%;
+    }
+
+    .formulario{
+        width: 100%;
+    }
 }

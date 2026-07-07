@@ -2,102 +2,82 @@
 <html lang="es">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Contacto | KIZUNA</title>
-
-    <link rel="stylesheet" href="css/style.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
+    <title>KIZUNA | Contacto</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header>
+    <nav class="navbar">
 
-<nav class="navbar">
+        <h1>KIZUNA</h1>
 
-<h2 class="logo">🐾 KIZUNA</h2>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="mascotas.html">Mascotas</a></li>
+            <li><a href="adopta.html">Adopta</a></li>
+            <li><a href="donaciones.html">Donaciones</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
 
-<ul>
-
-<li><a href="index.html">Inicio</a></li>
-<li><a href="mascotas.html">Mascotas</a></li>
-<li><a href="adopta.html">Adopta</a></li>
-<li><a href="donaciones.html">Donaciones</a></li>
-<li><a href="contacto.html">Contacto</a></li>
-
-</ul>
-
-</nav>
-
+    </nav>
 </header>
 
-<section class="titulo-pagina">
+<main>
 
-<h1>Contáctanos</h1>
+<section class="pagina">
 
-<p>
+    <h2>Contáctanos</h2>
 
-¿Tienes dudas sobre una adopción o deseas ayudarnos?
-Escríbenos y nos pondremos en contacto contigo.
+    <p>
+        Si deseas más información sobre adopciones o donaciones,
+        puedes comunicarte con nosotros mediante el siguiente formulario.
+    </p>
 
-</p>
+    <form class="formulario">
 
-</section>
+        <label>Nombre</label>
+        <input type="text" placeholder="Ingresa tu nombre">
 
-<section class="contacto">
+        <label>Correo electrónico</label>
+        <input type="email" placeholder="Ingresa tu correo">
 
-<div class="info-contacto">
+        <label>Asunto</label>
+        <input type="text" placeholder="Escribe el asunto">
 
-<h2>Información</h2>
+        <label>Mensaje</label>
+        <textarea rows="6" placeholder="Escribe tu mensaje"></textarea>
 
-<p>Lima, Perú</p>
+        <button type="submit" class="btn">
+            Enviar mensaje
+        </button>
 
-<p>+51 987 013 804</p>
+    </form>
 
-<p>contacto@kizuna.com</p>
+    <div class="informacion">
 
-<p>Lunes a Sábado<br>9:00 am - 6:00 pm</p>
+        <h3>Información</h3>
 
-</div>
+        <p><strong>Dirección:</strong> Lima, Perú</p>
 
-<div class="form-contacto">
+        <p><strong>Teléfono:</strong> +51 987 013 804</p>
 
-<form>
+        <p><strong>Correo:</strong> contacto@kizuna.com</p>
 
-<input type="text" placeholder="Nombre completo" required>
-
-<input type="email" placeholder="Correo electrónico" required>
-
-<input type="tel" placeholder="Teléfono" required>
-
-<textarea rows="6" placeholder="Escribe tu mensaje..." required></textarea>
-
-<button class="btn" type="submit">
-
-Enviar Mensaje
-
-</button>
-
-</form>
-
-</div>
+    </div>
 
 </section>
+
+</main>
 
 <footer>
 
-<h2>KIZUNA</h2>
-
-<p>Vínculos que duran para siempre.</p>
-
-<p>© 2026 Todos los derechos reservados.</p>
+<p>
+© 2026 KIZUNA - Centro de Adopción Animal
+</p>
 
 </footer>
 
