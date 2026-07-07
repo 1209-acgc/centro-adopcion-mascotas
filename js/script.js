@@ -1,20 +1,41 @@
-// Mensaje de bienvenida en la página
-document.addEventListener("DOMContentLoaded", () => {
-    console.log("Centro de Adopción cargado correctamente 🐶🐱");
+// Scroll suave para los enlaces del menú
+
+document.querySelectorAll('a').forEach(link => {
+
+link.addEventListener('click', function(e){
+
+const destino = this.getAttribute('href');
+
+if(destino.startsWith("#")){
+
+e.preventDefault();
+
+document.querySelector(destino).scrollIntoView({
+
+behavior:'smooth'
+
 });
 
-// Botones de adopción
-const botonesAdopcion = document.querySelectorAll(".btn-adoptar");
-
-botonesAdopcion.forEach(boton => {
-    boton.addEventListener("click", () => {
-        alert("¡Gracias por querer adoptar! 🐾 Pronto nos comunicaremos contigo.");
-    });
-});
-
-// Año automático en el pie de página
-const año = document.querySelector("#año");
-
-if (año) {
-    año.textContent = new Date().getFullYear();
 }
+
+});
+
+});
+
+// Mensaje del formulario
+
+const formularios = document.querySelectorAll("form");
+
+formularios.forEach(form => {
+
+form.addEventListener("submit", function(e){
+
+e.preventDefault();
+
+alert("✅ Gracias por comunicarte con KIZUNA. Hemos recibido tu información.");
+
+form.reset();
+
+});
+
+});

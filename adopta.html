@@ -1,72 +1,129 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KIZUNA | Adopta</title>
-<link rel="stylesheet" href="css/style.css">
-</head>
 
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Adopta | KIZUNA</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
 
 <body>
 
 <header>
 
-<h1>KIZUNA 🐾</h1>
+<nav class="navbar">
 
-<nav>
-<a href="index.html">Inicio</a>
-<a href="mascotas.html">Mascotas</a>
-<a href="adopta.html">Adopta</a>
-<a href="donaciones.html">Donaciones</a>
-<a href="contacto.html">Contacto</a>
+<h2 class="logo">🐾 KIZUNA</h2>
+
+<ul>
+
+<li><a href="index.html">Inicio</a></li>
+
+<li><a href="mascotas.html">Mascotas</a></li>
+
+<li><a href="adopta.html">Adopta</a></li>
+
+<li><a href="donaciones.html">Donaciones</a></li>
+
+<li><a href="contacto.html">Contacto</a></li>
+
+</ul>
+
 </nav>
 
 </header>
 
+<section class="titulo-pagina">
 
-<main>
-
-<h2>Proceso de adopción</h2>
+<h1>Proceso de Adopción</h1>
 
 <p>
-Completa tus datos para iniciar el proceso y darle un hogar a una mascota.
+Adoptar es brindar una segunda oportunidad. Sigue estos pasos para encontrar a tu nuevo mejor amigo.
 </p>
 
+</section>
+
+<section class="pasos">
+
+<div class="paso">
+<h2>1️⃣ Elige una mascota</h2>
+<p>Revisa nuestras mascotas disponibles y selecciona la que mejor se adapte a tu hogar.</p>
+</div>
+
+<div class="paso">
+<h2>2️⃣ Completa el formulario</h2>
+<p>Llena tus datos para que podamos conocerte mejor.</p>
+</div>
+
+<div class="paso">
+<h2>3️⃣ Entrevista</h2>
+<p>Nuestro equipo evaluará la solicitud y resolverá tus dudas.</p>
+</div>
+
+<div class="paso">
+<h2>4️⃣ ¡Llévala a casa!</h2>
+<p>Una vez aprobada la adopción, podrás comenzar una nueva historia junto a tu mascota.</p>
+</div>
+
+</section>
+
+<section class="formulario">
+
+<h2>Formulario de Adopción</h2>
 
 <form>
 
-<input type="text" placeholder="Nombre completo">
+<input type="text" placeholder="Nombre completo" required>
 
-<input type="email" placeholder="Correo">
+<input type="email" placeholder="Correo electrónico" required>
 
-<select>
-<option>Elige una mascota</option>
+<input type="tel" placeholder="Celular" required>
+
+<select required>
+
+<option value="">Mascota de interés</option>
+
 <option>Max</option>
+
 <option>Luna</option>
-<option>Rocky</option>
+
+<option>Toby</option>
+
 </select>
 
+<textarea placeholder="¿Por qué deseas adoptar?" rows="6"></textarea>
 
-<textarea placeholder="¿Por qué deseas adoptar?"></textarea>
+<button type="submit" class="btn">
 
+Enviar Solicitud
 
-<button class="btn-adoptar">
-Enviar solicitud 🐾
 </button>
-
 
 </form>
 
-</main>
-
+</section>
 
 <footer>
-© 2026 KIZUNA 🐶
-</footer>
 
+<h2>KIZUNA</h2>
+
+<p>Vínculos que duran para siempre.</p>
+
+<p>© 2026 Todos los derechos reservados.</p>
+
+</footer>
 
 <script src="js/script.js"></script>
 
 </body>
+
 </html>

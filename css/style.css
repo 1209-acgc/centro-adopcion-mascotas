@@ -1,243 +1,691 @@
-/* ===== CONFIGURACIÓN GENERAL ===== */
+/* ===========================
+   PALETA DE COLORES
+=========================== */
+
+:root{
+    --naranja:#FFA45B;
+    --amarillo:#FFDA77;
+    --crema:#FBF6F0;
+    --celeste:#AEE6E6;
+    --texto:#333;
+    --blanco:#ffffff;
+}
+
+/* ===========================
+   GENERAL
+=========================== */
 
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
 }
-
-
-html{
-    scroll-behavior: smooth;
-}
-
 
 body{
-    background-color: #f8f8f8;
-    color: #333;
+    background:var(--crema);
+    color:var(--texto);
 }
 
-
-/* ===== HEADER ===== */
-
-header{
-    background-color: #7ac7c4;
-    padding: 15px 40px;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-
-
-nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-
-nav h1{
-    color: white;
-    font-size: 32px;
-}
-
-
-nav ul{
-    display: flex;
-    list-style: none;
-    gap: 25px;
-}
-
-
-nav ul li a{
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-
-nav ul li a:hover{
-    color: #ffdf8a;
-}
-
-
-
-/* ===== INICIO ===== */
-
-.inicio{
-    height: 500px;
-    background-image: linear-gradient(
-        rgba(0,0,0,0.4),
-        rgba(0,0,0,0.4)
-    ), url("img/fondo.jpg");
-
-    background-size: cover;
-    background-position: center;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    text-align: center;
-    color: white;
-}
-
-
-.texto-inicio{
-    max-width: 700px;
-}
-
-
-.texto-inicio h2{
-    font-size: 45px;
-    margin-bottom: 20px;
-}
-
-
-.texto-inicio p{
-    font-size: 20px;
-    margin-bottom: 30px;
-}
-
-
-
-.boton{
-    background-color: #ff9f68;
-    color:white;
-    padding: 14px 30px;
-    border-radius: 30px;
+a{
     text-decoration:none;
+}
+
+ul{
+    list-style:none;
+}
+
+/* ===========================
+   NAVBAR
+=========================== */
+
+.navbar{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:20px 8%;
+
+    background:white;
+
+    position:sticky;
+    top:0;
+    z-index:1000;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+}
+
+.logo{
+
+    color:var(--naranja);
+    font-size:30px;
     font-weight:bold;
+
 }
 
+.navbar ul{
 
+    display:flex;
+    gap:35px;
 
-/* ===== SECCIONES ===== */
+}
 
-section{
-    padding: 60px 40px;
+.navbar a{
+
+    color:#444;
+    font-weight:500;
+    transition:.3s;
+
+}
+
+.navbar a:hover{
+
+    color:var(--naranja);
+
+}
+
+/* ===========================
+   HERO
+=========================== */
+
+.hero{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:80px 8%;
+
+}
+
+.hero-text{
+
+    width:50%;
+
+}
+
+.hero-text h1{
+
+    font-size:55px;
+    margin-bottom:20px;
+
+}
+
+.hero-text p{
+
+    font-size:18px;
+    line-height:30px;
+    margin-bottom:35px;
+
+}
+
+.hero-img{
+
+    width:45%;
+
+}
+
+.hero-img img{
+
+    width:100%;
+
+}
+
+.btn{
+
+    background:var(--naranja);
+    color:white;
+
+    padding:15px 35px;
+
+    border-radius:40px;
+
+    transition:.3s;
+
+}
+
+.btn:hover{
+
+    background:#ff8e38;
+
+}
+
+/* ===========================
+   MASCOTAS
+=========================== */
+
+.destacados{
+
+    padding:80px 8%;
+
+}
+
+.destacados h2{
+
     text-align:center;
+    margin-bottom:50px;
+    font-size:38px;
+
 }
-
-
-section h2{
-    font-size: 35px;
-    color:#4b7f7d;
-    margin-bottom:25px;
-}
-
-
-/* ===== TARJETAS MASCOTAS ===== */
 
 .cards{
-    display:flex;
-    justify-content:center;
-    gap:30px;
-    flex-wrap:wrap;
-}
 
+    display:flex;
+    gap:30px;
+
+}
 
 .card{
+
     background:white;
-    width:280px;
-    padding:20px;
+
     border-radius:20px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.15);
+
+    overflow:hidden;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+    flex:1;
+
 }
 
+.card:hover{
+
+    transform:translateY(-10px);
+
+}
 
 .card img{
+
     width:100%;
     height:250px;
     object-fit:cover;
-    border-radius:15px;
-}
 
+}
 
 .card h3{
-    margin:15px 0;
-    color:#555;
+
+    margin-top:20px;
+    text-align:center;
+
 }
 
+.card p{
 
-.card button,
-.adopta button,
-.donar{
+    padding:10px 25px;
+    text-align:center;
 
-    background:#ff9f68;
+}
+
+.btn-card{
+
+    display:block;
+
+    width:160px;
+
+    margin:20px auto 30px;
+
+    background:var(--celeste);
+
+    color:#333;
+
+    text-align:center;
+
+    padding:12px;
+
+    border-radius:30px;
+
+    font-weight:600;
+
+}
+
+.btn-card:hover{
+
+    background:var(--naranja);
     color:white;
 
-    border:none;
-    padding:12px 25px;
-
-    border-radius:25px;
-
-    cursor:pointer;
-    margin-top:15px;
-
-    font-weight:bold;
 }
 
+/* ===========================
+   BENEFICIOS
+=========================== */
 
+.beneficios{
 
-/* ===== ADOPTA ===== */
+    padding:80px 8%;
 
-.adopta{
-    background:#fff3dc;
 }
 
+.beneficios h2{
 
+    text-align:center;
+    margin-bottom:45px;
 
-/* ===== DONACIONES ===== */
-
-.donaciones{
-    background:#e9f7f6;
 }
 
-
-.donacion-container{
+.contenedor-beneficios{
 
     display:flex;
-    justify-content:center;
-    gap:25px;
-    flex-wrap:wrap;
+    gap:30px;
 
 }
 
-
-.donacion-card{
+.beneficio{
 
     background:white;
-    width:250px;
-    padding:25px;
+
+    flex:1;
 
     border-radius:20px;
 
-    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    padding:40px;
+
+    text-align:center;
+
+    box-shadow:0 10px 20px rgba(0,0,0,.08);
 
 }
 
+.beneficio i{
 
+    font-size:55px;
 
-/* ===== CONTACTO ===== */
+    color:var(--naranja);
 
-#contacto{
-    background:white;
+    margin-bottom:20px;
+
 }
 
+.beneficio h3{
 
+    margin-bottom:15px;
 
-/* ===== FOOTER ===== */
+}
+
+/* ===========================
+   FOOTER
+=========================== */
 
 footer{
 
     background:#333;
+
     color:white;
 
-    padding:25px;
-
     text-align:center;
+
+    padding:50px;
+
+}
+
+footer h2{
+
+    margin-bottom:15px;
+
+}
+
+footer p{
+
+    margin:8px;
+
+}
+
+.redes{
+
+    margin-top:20px;
+
+}
+
+.redes i{
+
+    font-size:25px;
+
+    margin:10px;
+
+    cursor:pointer;
+
+}
+
+.redes i:hover{
+
+    color:var(--amarillo);
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:900px){
+
+.hero{
+
+flex-direction:column;
+
+}
+
+.hero-text{
+
+width:100%;
+text-align:center;
+
+}
+
+.hero-img{
+
+width:90%;
+margin-top:40px;
+
+}
+
+.cards{
+
+flex-direction:column;
+
+}
+
+.contenedor-beneficios{
+
+flex-direction:column;
+
+}
+
+.navbar{
+
+flex-direction:column;
+gap:20px;
+
+}
+
+.navbar ul{
+
+flex-direction:column;
+text-align:center;
+
+}
+
+}
+
+/*=========================
+PROCESO DE ADOPCIÓN
+=========================*/
+
+.pasos{
+
+padding:70px 10%;
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:25px;
+
+}
+
+.paso{
+
+background:white;
+
+padding:30px;
+
+border-radius:18px;
+
+box-shadow:0 10px 20px rgba(0,0,0,.08);
+
+text-align:center;
+
+}
+
+.paso h2{
+
+color:var(--naranja);
+
+margin-bottom:15px;
+
+}
+
+/*=========================
+FORMULARIO
+=========================*/
+
+.formulario{
+
+padding:80px 10%;
+
+}
+
+.formulario h2{
+
+text-align:center;
+
+margin-bottom:40px;
+
+}
+
+form{
+
+max-width:700px;
+
+margin:auto;
+
+display:flex;
+
+flex-direction:column;
+
+gap:20px;
+
+}
+
+form input,
+form select,
+form textarea{
+
+padding:15px;
+
+border:2px solid #ddd;
+
+border-radius:12px;
+
+font-size:16px;
+
+outline:none;
+
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus{
+
+border-color:var(--naranja);
+
+}
+
+form button{
+
+border:none;
+
+cursor:pointer;
+
+font-size:17px;
+
+}
+
+/*=========================
+DONACIONES
+=========================*/
+
+.donaciones{
+
+padding:70px 10%;
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+}
+
+.donacion-card{
+
+background:white;
+
+padding:35px;
+
+border-radius:20px;
+
+box-shadow:0 10px 20px rgba(0,0,0,.08);
+
+text-align:center;
+
+transition:.3s;
+
+}
+
+.donacion-card:hover{
+
+transform:translateY(-8px);
+
+}
+
+.donacion-card h2{
+
+color:var(--naranja);
+
+margin-bottom:20px;
+
+}
+
+.donacion-card p{
+
+margin-bottom:25px;
+
+line-height:28px;
+
+}
+
+.datos-donacion{
+
+padding:70px 10%;
+
+text-align:center;
+
+}
+
+.datos-donacion h2{
+
+margin-bottom:25px;
+
+color:var(--naranja);
+
+}
+
+.datos-donacion p{
+
+font-size:18px;
+
+margin:15px 0;
+
+}
+
+/*=========================
+CONTACTO
+=========================*/
+
+.contacto{
+
+padding:80px 10%;
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:40px;
+
+}
+
+.info-contacto{
+
+background:white;
+
+padding:40px;
+
+border-radius:20px;
+
+box-shadow:0 10px 20px rgba(0,0,0,.08);
+
+}
+
+.info-contacto h2{
+
+color:var(--naranja);
+
+margin-bottom:25px;
+
+}
+
+.info-contacto p{
+
+margin:18px 0;
+
+font-size:17px;
+
+}
+
+.form-contacto{
+
+background:white;
+
+padding:40px;
+
+border-radius:20px;
+
+box-shadow:0 10px 20px rgba(0,0,0,.08);
+
+}
+
+.form-contacto form{
+
+display:flex;
+
+flex-direction:column;
+
+gap:20px;
+
+}
+
+.form-contacto input,
+.form-contacto textarea{
+
+padding:15px;
+
+border:2px solid #ddd;
+
+border-radius:10px;
+
+font-size:16px;
+
+outline:none;
+
+}
+
+.form-contacto input:focus,
+.form-contacto textarea:focus{
+
+border-color:var(--naranja);
+
+}
+
+@media(max-width:900px){
+
+.contacto{
+
+grid-template-columns:1fr;
+
+}
 
 }
