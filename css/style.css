@@ -1,43 +1,69 @@
 /* ===========================
-   PALETA DE COLORES
+   VARIABLES
 =========================== */
 
 :root{
+
     --naranja:#FFA45B;
     --amarillo:#FFDA77;
     --crema:#FBF6F0;
     --celeste:#AEE6E6;
     --texto:#333;
-    --blanco:#ffffff;
+    --blanco:#fff;
+
 }
+
 
 /* ===========================
    GENERAL
 =========================== */
 
+
 *{
+
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
+
 }
+
 
 body{
+
+    font-family:'Poppins',sans-serif;
     background:var(--crema);
     color:var(--texto);
+
 }
+
+
+img{
+
+    max-width:100%;
+    display:block;
+
+}
+
 
 a{
+
     text-decoration:none;
+
 }
 
+
 ul{
+
     list-style:none;
+
 }
+
+
 
 /* ===========================
    NAVBAR
 =========================== */
+
 
 .navbar{
 
@@ -51,19 +77,24 @@ ul{
 
     position:sticky;
     top:0;
+
     z-index:1000;
 
     box-shadow:0 5px 15px rgba(0,0,0,.08);
 
 }
 
+
+
 .logo{
 
     color:var(--naranja);
     font-size:30px;
-    font-weight:bold;
+    font-weight:700;
 
 }
+
+
 
 .navbar ul{
 
@@ -72,13 +103,18 @@ ul{
 
 }
 
+
+
 .navbar a{
 
     color:#444;
     font-weight:500;
+
     transition:.3s;
 
 }
+
+
 
 .navbar a:hover{
 
@@ -86,19 +122,25 @@ ul{
 
 }
 
+
+
+
 /* ===========================
-   HERO
+ HERO
 =========================== */
+
 
 .hero{
 
     display:flex;
-    justify-content:space-between;
     align-items:center;
+    justify-content:space-between;
 
     padding:80px 8%;
 
 }
+
+
 
 .hero-text{
 
@@ -106,20 +148,29 @@ ul{
 
 }
 
+
+
 .hero-text h1{
 
     font-size:55px;
+    line-height:1.2;
+
     margin-bottom:20px;
 
 }
+
+
 
 .hero-text p{
 
     font-size:18px;
     line-height:30px;
+
     margin-bottom:35px;
 
 }
+
+
 
 .hero-img{
 
@@ -127,34 +178,50 @@ ul{
 
 }
 
+
+
 .hero-img img{
 
-    width:100%;
+    border-radius:25px;
 
 }
 
-.btn{
+
+
+/* Botón personalizado */
+
+.btn-kizuna{
 
     background:var(--naranja);
+
     color:white;
 
     padding:15px 35px;
 
     border-radius:40px;
 
+    display:inline-block;
+
     transition:.3s;
 
 }
 
-.btn:hover{
+
+
+.btn-kizuna:hover{
 
     background:#ff8e38;
+    color:white;
 
 }
 
+
+
+
 /* ===========================
-   MASCOTAS
+ DESTACADOS
 =========================== */
+
 
 .destacados{
 
@@ -162,24 +229,36 @@ ul{
 
 }
 
+
+
 .destacados h2{
 
     text-align:center;
-    margin-bottom:50px;
+
     font-size:38px;
 
+    margin-bottom:50px;
+
 }
+
+
 
 .cards{
 
     display:flex;
+
     gap:30px;
 
 }
 
+
+
+
 .card{
 
     background:white;
+
+    flex:1;
 
     border-radius:20px;
 
@@ -189,9 +268,9 @@ ul{
 
     transition:.3s;
 
-    flex:1;
-
 }
+
+
 
 .card:hover{
 
@@ -199,60 +278,44 @@ ul{
 
 }
 
+
+
 .card img{
 
     width:100%;
+
     height:250px;
+
     object-fit:cover;
 
 }
 
+
+
 .card h3{
 
-    margin-top:20px;
     text-align:center;
 
+    margin-top:20px;
+
 }
+
+
 
 .card p{
 
-    padding:10px 25px;
     text-align:center;
 
-}
-
-.btn-card{
-
-    display:block;
-
-    width:160px;
-
-    margin:20px auto 30px;
-
-    background:var(--celeste);
-
-    color:#333;
-
-    text-align:center;
-
-    padding:12px;
-
-    border-radius:30px;
-
-    font-weight:600;
+    padding:15px 25px;
 
 }
 
-.btn-card:hover{
 
-    background:var(--naranja);
-    color:white;
-
-}
 
 /* ===========================
-   BENEFICIOS
+ BENEFICIOS
 =========================== */
+
 
 .beneficios{
 
@@ -260,35 +323,55 @@ ul{
 
 }
 
+
+
 .beneficios h2{
 
     text-align:center;
+
     margin-bottom:45px;
 
 }
 
+
+
 .contenedor-beneficios{
 
-    display:flex;
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
     gap:30px;
 
 }
+
+
 
 .beneficio{
 
     background:white;
 
-    flex:1;
-
-    border-radius:20px;
-
     padding:40px;
 
     text-align:center;
 
+    border-radius:20px;
+
     box-shadow:0 10px 20px rgba(0,0,0,.08);
 
+    transition:.3s;
+
 }
+
+
+
+.beneficio:hover{
+
+    transform:translateY(-8px);
+
+}
+
+
 
 .beneficio i{
 
@@ -300,15 +383,20 @@ ul{
 
 }
 
+
+
 .beneficio h3{
 
     margin-bottom:15px;
 
 }
 
+
+
 /* ===========================
-   FOOTER
+ FOOTER
 =========================== */
+
 
 footer{
 
@@ -322,23 +410,31 @@ footer{
 
 }
 
+
+
 footer h2{
 
     margin-bottom:15px;
 
 }
 
+
+
 footer p{
 
-    margin:8px;
+    margin:10px;
 
 }
+
+
 
 .redes{
 
-    margin-top:20px;
+    margin:20px;
 
 }
+
+
 
 .redes i{
 
@@ -350,342 +446,136 @@ footer p{
 
 }
 
+
+
 .redes i:hover{
 
     color:var(--amarillo);
 
 }
 
+
+
+
 /* ===========================
-   RESPONSIVE
+ RESPONSIVE TABLET
 =========================== */
 
+
 @media(max-width:900px){
+
 
 .hero{
 
-flex-direction:column;
+    flex-direction:column;
 
 }
+
 
 .hero-text{
 
-width:100%;
-text-align:center;
+    width:100%;
+
+    text-align:center;
 
 }
+
 
 .hero-img{
 
-width:90%;
-margin-top:40px;
+    width:90%;
+
+    margin-top:40px;
 
 }
+
+
 
 .cards{
 
-flex-direction:column;
+    flex-direction:column;
 
 }
+
+
 
 .contenedor-beneficios{
 
-flex-direction:column;
+    grid-template-columns:1fr;
 
 }
+
+
 
 .navbar{
 
-flex-direction:column;
-gap:20px;
+    flex-direction:column;
+
+    gap:20px;
 
 }
+
+
 
 .navbar ul{
 
-flex-direction:column;
-text-align:center;
+    flex-direction:column;
+
+    text-align:center;
 
 }
 
-}
-
-/*=========================
-PROCESO DE ADOPCIÓN
-=========================*/
-
-.pasos{
-
-padding:70px 10%;
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-
-gap:25px;
 
 }
 
-.paso{
 
-background:white;
 
-padding:30px;
 
-border-radius:18px;
+/* ===========================
+ RESPONSIVE CELULAR
+=========================== */
 
-box-shadow:0 10px 20px rgba(0,0,0,.08);
 
-text-align:center;
+@media(max-width:480px){
 
-}
 
-.paso h2{
+.hero-text h1{
 
-color:var(--naranja);
-
-margin-bottom:15px;
+    font-size:35px;
 
 }
 
-/*=========================
-FORMULARIO
-=========================*/
 
-.formulario{
 
-padding:80px 10%;
+.hero-text p{
+
+    font-size:16px;
 
 }
 
-.formulario h2{
 
-text-align:center;
 
-margin-bottom:40px;
+.logo{
 
-}
-
-form{
-
-max-width:700px;
-
-margin:auto;
-
-display:flex;
-
-flex-direction:column;
-
-gap:20px;
+    font-size:25px;
 
 }
 
-form input,
-form select,
-form textarea{
 
-padding:15px;
 
-border:2px solid #ddd;
+.card img{
 
-border-radius:12px;
-
-font-size:16px;
-
-outline:none;
+    height:200px;
 
 }
 
-form input:focus,
-form select:focus,
-form textarea:focus{
 
-border-color:var(--naranja);
 
-}
+footer{
 
-form button{
-
-border:none;
-
-cursor:pointer;
-
-font-size:17px;
+    padding:30px 15px;
 
 }
 
-/*=========================
-DONACIONES
-=========================*/
-
-.donaciones{
-
-padding:70px 10%;
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-
-gap:30px;
-
-}
-
-.donacion-card{
-
-background:white;
-
-padding:35px;
-
-border-radius:20px;
-
-box-shadow:0 10px 20px rgba(0,0,0,.08);
-
-text-align:center;
-
-transition:.3s;
-
-}
-
-.donacion-card:hover{
-
-transform:translateY(-8px);
-
-}
-
-.donacion-card h2{
-
-color:var(--naranja);
-
-margin-bottom:20px;
-
-}
-
-.donacion-card p{
-
-margin-bottom:25px;
-
-line-height:28px;
-
-}
-
-.datos-donacion{
-
-padding:70px 10%;
-
-text-align:center;
-
-}
-
-.datos-donacion h2{
-
-margin-bottom:25px;
-
-color:var(--naranja);
-
-}
-
-.datos-donacion p{
-
-font-size:18px;
-
-margin:15px 0;
-
-}
-
-/*=========================
-CONTACTO
-=========================*/
-
-.contacto{
-
-padding:80px 10%;
-
-display:grid;
-
-grid-template-columns:1fr 1fr;
-
-gap:40px;
-
-}
-
-.info-contacto{
-
-background:white;
-
-padding:40px;
-
-border-radius:20px;
-
-box-shadow:0 10px 20px rgba(0,0,0,.08);
-
-}
-
-.info-contacto h2{
-
-color:var(--naranja);
-
-margin-bottom:25px;
-
-}
-
-.info-contacto p{
-
-margin:18px 0;
-
-font-size:17px;
-
-}
-
-.form-contacto{
-
-background:white;
-
-padding:40px;
-
-border-radius:20px;
-
-box-shadow:0 10px 20px rgba(0,0,0,.08);
-
-}
-
-.form-contacto form{
-
-display:flex;
-
-flex-direction:column;
-
-gap:20px;
-
-}
-
-.form-contacto input,
-.form-contacto textarea{
-
-padding:15px;
-
-border:2px solid #ddd;
-
-border-radius:10px;
-
-font-size:16px;
-
-outline:none;
-
-}
-
-.form-contacto input:focus,
-.form-contacto textarea:focus{
-
-border-color:var(--naranja);
-
-}
-
-@media(max-width:900px){
-
-.contacto{
-
-grid-template-columns:1fr;
-
-}
 
 }
