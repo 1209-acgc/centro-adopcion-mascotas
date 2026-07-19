@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Adopta | KIZUNA</title>
+<title>KIZUNA | Vínculos que duran para siempre</title>
 
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -24,9 +24,7 @@
 
 </head>
 
-
 <body>
-
 
 <header>
 
@@ -36,17 +34,12 @@
 🐾 <span>KIZUNA</span>
 </div>
 
-
 <ul>
 
 <li><a href="index.html">Inicio</a></li>
-
 <li><a href="mascotas.html">Mascotas</a></li>
-
 <li><a href="adopta.html">Adopta</a></li>
-
 <li><a href="donaciones.html">Donaciones</a></li>
-
 <li><a href="contacto.html">Contacto</a></li>
 
 </ul>
@@ -55,193 +48,177 @@
 
 </header>
 
+<section class="hero" data-aos="fade-up">
 
+<div class="hero-text">
 
-<section class="titulo-pagina" data-aos="fade-down">
-
-<h1>Proceso de Adopción</h1>
+<h1>
+Encuentra un amigo para toda la vida
+</h1>
 
 <p>
-Adoptar significa brindar una segunda oportunidad.
-Completa el formulario y ayúdanos a encontrar un hogar para nuestras mascotas.
+
+En KIZUNA creemos que cada mascota merece un hogar lleno de amor, protección y una familia responsable. Ayúdanos a cambiar una vida mediante la adopción.
+
 </p>
+
+<div class="d-flex gap-3 flex-wrap">
+
+<a href="mascotas.html" class="btn btn-success btn-lg">
+
+<i class="fa-solid fa-paw"></i>
+
+Ver mascotas
+
+</a>
+
+<a href="adopta.html" class="btn btn-outline-success btn-lg">
+
+<i class="fa-solid fa-heart"></i>
+
+Quiero adoptar
+
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-img">
+
+<img src="img/mascotas felices.jpg" alt="Mascotas felices">
+
+</div>
 
 </section>
 
+<section class="destacados" data-aos="zoom-in">
 
+<h2>Mascotas Destacadas</h2>
 
+<div class="cards">
 
-<section class="pasos" data-aos="fade-up">
+<div class="card">
 
+<img src="img/perro1.jpg" alt="Max">
 
-<div class="paso">
-
-<i class="fa-solid fa-paw fa-3x"></i>
-
-<h2>1. Elige</h2>
+<h3>MAX</h3>
 
 <p>
-Selecciona la mascota que deseas adoptar.
+
+Cachorro de 2 meses, juguetón y muy cariñoso.
+
 </p>
+
+<a href="mascotas.html" class="btn btn-success">
+
+Conocer
+
+</a>
 
 </div>
 
+<div class="card">
 
-<div class="paso">
+<img src="img/gato1.jpg" alt="Luna">
 
-<i class="fa-solid fa-file-signature fa-3x"></i>
-
-<h2>2. Regístrate</h2>
+<h3>LUNA</h3>
 
 <p>
-Completa tus datos para conocer tu solicitud.
+
+Gatita tranquila de 3 meses, perfecta para departamentos.
+
 </p>
+
+<a href="mascotas.html" class="btn btn-success">
+
+Conocer
+
+</a>
 
 </div>
 
+<div class="card">
 
-<div class="paso">
+<img src="img/perro2.jpg" alt="Toby">
 
-<i class="fa-solid fa-comments fa-3x"></i>
-
-<h2>3. Evaluación</h2>
+<h3>TOBY</h3>
 
 <p>
-Nos comunicaremos contigo para coordinar.
+
+Perro adulto muy noble y listo para formar parte de una familia.
+
 </p>
+
+<a href="mascotas.html" class="btn btn-success">
+
+Conocer
+
+</a>
 
 </div>
 
-
-<div class="paso">
-
-<i class="fa-solid fa-house fa-3x"></i>
-
-<h2>4. Nuevo hogar</h2>
-
-<p>
-Una nueva historia comienza junto a tu mascota.
-</p>
-
 </div>
-
 
 </section>
 
+<section class="beneficios" data-aos="fade-left">
 
+<h2>¿Por qué adoptar?</h2>
 
+<div class="contenedor-beneficios">
 
+<div class="beneficio">
 
-<section class="formulario" data-aos="zoom-in">
+<i class="fa-solid fa-heart"></i>
 
+<h3>Amor Incondicional</h3>
 
-<h2>
-Formulario de Adopción
-</h2>
+<p>
 
+Una mascota llenará tu hogar de compañía y felicidad.
 
+</p>
 
-<form onsubmit="enviarWhatsApp(); return false;">
+</div>
 
+<div class="beneficio">
 
+<i class="fa-solid fa-house"></i>
 
-<input 
-type="text" 
-id="nombre"
-placeholder="Nombre completo"
-required>
+<h3>Un Nuevo Hogar</h3>
 
+<p>
 
+Cada adopción representa una segunda oportunidad para un animal.
 
-<input 
-type="email"
-id="correo"
-placeholder="Correo electrónico"
-required>
+</p>
 
+</div>
 
+<div class="beneficio">
 
-<input 
-type="tel"
-id="celular"
-placeholder="Número de celular"
-required>
+<i class="fa-solid fa-paw"></i>
 
+<h3>Adopción Responsable</h3>
 
+<p>
 
-<select id="mascota" required>
+Promovemos familias comprometidas con el bienestar animal.
 
+</p>
 
-<option value="">
-Selecciona una mascota
-</option>
+</div>
 
-
-<option>
-MAX
-</option>
-
-
-<option>
-LUNA
-</option>
-
-
-<option>
-TOBY
-</option>
-
-
-</select>
-
-
-
-<textarea
-id="mensaje"
-rows="6"
-placeholder="¿Por qué deseas adoptar?"
-required></textarea>
-
-
-
-
-<button 
-type="submit" 
-class="btn btn-success btn-lg">
-
-
-<i class="fa-brands fa-whatsapp"></i>
-
-Enviar Solicitud
-
-
-</button>
-
-
-
-</form>
-
+</div>
 
 </section>
-
-
-
-
-
 
 <footer>
 
+<h2>🐾 KIZUNA</h2>
 
-<h2>
-🐾 KIZUNA
-</h2>
-
-
-<p>
-Vínculos que duran para siempre.
-</p>
-
-
+<p>Vínculos que duran para siempre.</p>
 
 <div class="redes">
 
@@ -253,27 +230,17 @@ Vínculos que duran para siempre.
 
 </div>
 
-
 <p>
 
 © 2026 KIZUNA | Centro de Adopción de Mascotas
 
 </p>
 
-
 </footer>
-
-
-
-
-
-
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 
-
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-
 
 <script>
 
@@ -282,64 +249,7 @@ duration:900,
 once:true
 });
 
-
-
-function enviarWhatsApp(){
-
-
-let nombre = document.getElementById("nombre").value;
-
-let correo = document.getElementById("correo").value;
-
-let celular = document.getElementById("celular").value;
-
-let mascota = document.getElementById("mascota").value;
-
-let mensaje = document.getElementById("mensaje").value;
-
-
-
-let numero = "51987013804";
-
-
-
-let texto = 
-`🐾 NUEVA SOLICITUD DE ADOPCIÓN - KIZUNA
-
-👤 Nombre:
-${nombre}
-
-📧 Correo:
-${correo}
-
-📱 Celular:
-${celular}
-
-🐶 Mascota elegida:
-${mascota}
-
-💬 Motivo:
-${mensaje}
-
-
-
-Gracias por formar parte de KIZUNA 🐾`;
-
-
-
-let url = 
-"https://wa.me/" + numero + "?text=" + encodeURIComponent(texto);
-
-
-
-window.open(url,"_blank");
-
-}
-
-
-
 </script>
-
 
 </body>
 
