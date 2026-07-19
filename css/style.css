@@ -1,23 +1,30 @@
-/* ===========================
+/* ==================================================
+   KIZUNA - STYLE CSS
+   Centro de Adopción de Mascotas
+================================================== */
+
+
+/* ==========================
    VARIABLES
-=========================== */
+========================== */
 
 :root{
 
     --naranja:#FFA45B;
     --amarillo:#FFDA77;
     --crema:#FBF6F0;
+    --verde:#198754;
     --celeste:#AEE6E6;
-    --texto:#333;
-    --blanco:#fff;
+    --texto:#333333;
+    --blanco:#ffffff;
+    --sombra:0 10px 25px rgba(0,0,0,.10);
 
 }
 
 
-/* ===========================
-   GENERAL
-=========================== */
-
+/* ==========================
+   RESET GENERAL
+========================== */
 
 *{
 
@@ -31,7 +38,9 @@
 body{
 
     font-family:'Poppins',sans-serif;
+
     background:var(--crema);
+
     color:var(--texto);
 
 }
@@ -39,7 +48,8 @@ body{
 
 img{
 
-    max-width:100%;
+    width:100%;
+
     display:block;
 
 }
@@ -60,15 +70,17 @@ ul{
 
 
 
-/* ===========================
+/* ==========================
    NAVBAR
-=========================== */
+========================== */
 
 
 .navbar{
 
     display:flex;
+
     justify-content:space-between;
+
     align-items:center;
 
     padding:20px 8%;
@@ -76,11 +88,12 @@ ul{
     background:white;
 
     position:sticky;
+
     top:0;
 
     z-index:1000;
 
-    box-shadow:0 5px 15px rgba(0,0,0,.08);
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
 
 }
 
@@ -88,9 +101,19 @@ ul{
 
 .logo{
 
-    color:var(--naranja);
     font-size:30px;
+
     font-weight:700;
+
+    color:var(--naranja);
+
+}
+
+
+
+.logo span{
+
+    color:var(--naranja);
 
 }
 
@@ -99,7 +122,10 @@ ul{
 .navbar ul{
 
     display:flex;
+
     gap:35px;
+
+    margin:0;
 
 }
 
@@ -108,6 +134,7 @@ ul{
 .navbar a{
 
     color:#444;
+
     font-weight:500;
 
     transition:.3s;
@@ -124,19 +151,65 @@ ul{
 
 
 
+/* ==========================
+   TITULOS DE PAGINAS
+========================== */
 
-/* ===========================
- HERO
-=========================== */
+
+.titulo-pagina{
+
+    text-align:center;
+
+    padding:70px 10% 40px;
+
+}
+
+
+
+.titulo-pagina h1{
+
+    font-size:45px;
+
+    font-weight:700;
+
+    color:var(--naranja);
+
+    margin-bottom:20px;
+
+}
+
+
+
+.titulo-pagina p{
+
+    font-size:18px;
+
+    max-width:800px;
+
+    margin:auto;
+
+    line-height:1.8;
+
+}
+
+
+
+/* ==========================
+   HERO INICIO
+========================== */
 
 
 .hero{
 
     display:flex;
-    align-items:center;
+
     justify-content:space-between;
 
-    padding:80px 8%;
+    align-items:center;
+
+    gap:40px;
+
+    padding:90px 8%;
 
 }
 
@@ -153,9 +226,12 @@ ul{
 .hero-text h1{
 
     font-size:55px;
+
     line-height:1.2;
 
-    margin-bottom:20px;
+    font-weight:700;
+
+    margin-bottom:25px;
 
 }
 
@@ -164,7 +240,8 @@ ul{
 .hero-text p{
 
     font-size:18px;
-    line-height:30px;
+
+    line-height:1.8;
 
     margin-bottom:35px;
 
@@ -182,25 +259,26 @@ ul{
 
 .hero-img img{
 
-    border-radius:25px;
+    border-radius:30px;
+
+    box-shadow:var(--sombra);
 
 }
 
 
 
-/* Botón personalizado */
+/* ==========================
+   BOTONES
+========================== */
 
-.btn-kizuna{
 
-    background:var(--naranja);
+.btn{
 
-    color:white;
+    border-radius:30px !important;
 
-    padding:15px 35px;
+    padding:12px 30px !important;
 
-    border-radius:40px;
-
-    display:inline-block;
+    font-weight:600;
 
     transition:.3s;
 
@@ -208,19 +286,17 @@ ul{
 
 
 
-.btn-kizuna:hover{
+.btn:hover{
 
-    background:#ff8e38;
-    color:white;
+    transform:translateY(-3px);
 
 }
 
 
 
-
-/* ===========================
- DESTACADOS
-=========================== */
+/* ==========================
+   SECCION DESTACADOS
+========================== */
 
 
 .destacados{
@@ -231,13 +307,16 @@ ul{
 
 
 
-.destacados h2{
+.destacados h2,
+.beneficios h2{
 
     text-align:center;
 
     font-size:38px;
 
     margin-bottom:50px;
+
+    font-weight:700;
 
 }
 
@@ -253,18 +332,19 @@ ul{
 
 
 
-
 .card{
 
-    background:white;
-
     flex:1;
+
+    border:none;
 
     border-radius:20px;
 
     overflow:hidden;
 
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    background:white;
+
+    box-shadow:var(--sombra);
 
     transition:.3s;
 
@@ -282,8 +362,6 @@ ul{
 
 .card img{
 
-    width:100%;
-
     height:250px;
 
     object-fit:cover;
@@ -296,7 +374,9 @@ ul{
 
     text-align:center;
 
-    margin-top:20px;
+    margin-top:25px;
+
+    font-weight:700;
 
 }
 
@@ -306,30 +386,20 @@ ul{
 
     text-align:center;
 
-    padding:15px 25px;
+    padding:10px 25px;
+
+    line-height:1.7;
 
 }
 
-
-
-/* ===========================
- BENEFICIOS
-=========================== */
+/* ==========================
+   BENEFICIOS
+========================== */
 
 
 .beneficios{
 
     padding:80px 8%;
-
-}
-
-
-
-.beneficios h2{
-
-    text-align:center;
-
-    margin-bottom:45px;
 
 }
 
@@ -351,13 +421,13 @@ ul{
 
     background:white;
 
-    padding:40px;
+    padding:40px 30px;
 
     text-align:center;
 
     border-radius:20px;
 
-    box-shadow:0 10px 20px rgba(0,0,0,.08);
+    box-shadow:var(--sombra);
 
     transition:.3s;
 
@@ -387,15 +457,342 @@ ul{
 
 .beneficio h3{
 
+    font-size:22px;
+
     margin-bottom:15px;
 
 }
 
 
 
-/* ===========================
- FOOTER
-=========================== */
+/* ==========================
+   PROCESO DE ADOPCIÓN
+========================== */
+
+
+.pasos{
+
+    padding:60px 8%;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+
+}
+
+
+
+.paso{
+
+    background:white;
+
+    padding:35px 25px;
+
+    text-align:center;
+
+    border-radius:20px;
+
+    box-shadow:var(--sombra);
+
+    transition:.3s;
+
+}
+
+
+
+.paso:hover{
+
+    transform:translateY(-8px);
+
+}
+
+
+
+.paso h2{
+
+    font-size:22px;
+
+    color:var(--naranja);
+
+    margin-bottom:15px;
+
+}
+
+
+
+.paso p{
+
+    line-height:1.7;
+
+}
+
+
+
+/* ==========================
+   FORMULARIOS
+========================== */
+
+
+.formulario,
+.form-contacto{
+
+    background:white;
+
+    margin:60px auto;
+
+    padding:50px;
+
+    border-radius:25px;
+
+    width:85%;
+
+    box-shadow:var(--sombra);
+
+}
+
+
+
+.formulario h2,
+.form-contacto h2{
+
+    text-align:center;
+
+    margin-bottom:35px;
+
+    color:var(--naranja);
+
+}
+
+
+
+form{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+
+
+form input,
+form select,
+form textarea{
+
+    width:100%;
+
+    padding:15px;
+
+    border-radius:15px;
+
+    border:2px solid #ddd;
+
+    font-family:'Poppins',sans-serif;
+
+    font-size:16px;
+
+    outline:none;
+
+    transition:.3s;
+
+}
+
+
+
+form input:focus,
+form select:focus,
+form textarea:focus{
+
+    border-color:var(--naranja);
+
+}
+
+
+
+/* ==========================
+   DONACIONES
+========================== */
+
+
+.donaciones{
+
+    padding:70px 8%;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+}
+
+
+
+.donacion-card{
+
+    background:white;
+
+    text-align:center;
+
+    padding:40px 30px;
+
+    border-radius:25px;
+
+    box-shadow:var(--sombra);
+
+    transition:.3s;
+
+}
+
+
+
+.donacion-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+
+
+.donacion-card i{
+
+    color:var(--naranja);
+
+}
+
+
+
+.donacion-card h2{
+
+    margin:20px 0;
+
+    font-size:25px;
+
+}
+
+
+
+.donacion-card p{
+
+    line-height:1.8;
+
+    margin-bottom:25px;
+
+}
+
+
+
+/* ==========================
+   DATOS DONACIÓN
+========================== */
+
+
+.datos-donacion{
+
+    padding:70px 8%;
+
+    text-align:center;
+
+}
+
+
+
+.datos-donacion h2{
+
+    color:var(--naranja);
+
+    margin-bottom:30px;
+
+}
+
+
+
+.datos-donacion .card{
+
+    padding:25px;
+
+}
+
+
+
+.datos-donacion h4{
+
+    margin-bottom:15px;
+
+}
+
+
+
+/* ==========================
+   CONTACTO
+========================== */
+
+
+.contacto{
+
+    padding:70px 8%;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:40px;
+
+}
+
+
+
+.info-contacto{
+
+    background:white;
+
+    padding:45px;
+
+    border-radius:25px;
+
+    box-shadow:var(--sombra);
+
+}
+
+
+
+.info-contacto h2{
+
+    color:var(--naranja);
+
+    margin-bottom:30px;
+
+}
+
+
+
+.info-contacto p{
+
+    font-size:17px;
+
+    margin:20px 0;
+
+}
+
+
+
+.info-contacto i{
+
+    color:var(--naranja);
+
+    margin-right:10px;
+
+}
+
+
+
+/* ==========================
+   FOOTER
+========================== */
 
 
 footer{
@@ -406,13 +803,15 @@ footer{
 
     text-align:center;
 
-    padding:50px;
+    padding:50px 20px;
 
 }
 
 
 
 footer h2{
+
+    font-size:32px;
 
     margin-bottom:15px;
 
@@ -430,7 +829,7 @@ footer p{
 
 .redes{
 
-    margin:20px;
+    margin:25px 0;
 
 }
 
@@ -438,11 +837,13 @@ footer p{
 
 .redes i{
 
-    font-size:25px;
+    font-size:28px;
 
-    margin:10px;
+    margin:0 10px;
 
     cursor:pointer;
+
+    transition:.3s;
 
 }
 
@@ -456,13 +857,12 @@ footer p{
 
 
 
+/* ==========================
+   RESPONSIVE TABLET
+========================== */
 
-/* ===========================
- RESPONSIVE TABLET
-=========================== */
 
-
-@media(max-width:900px){
+@media(max-width:1000px){
 
 
 .hero{
@@ -472,20 +872,13 @@ footer p{
 }
 
 
-.hero-text{
+
+.hero-text,
+.hero-img{
 
     width:100%;
 
     text-align:center;
-
-}
-
-
-.hero-img{
-
-    width:90%;
-
-    margin-top:40px;
 
 }
 
@@ -507,6 +900,30 @@ footer p{
 
 
 
+.pasos{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+
+
+.donaciones{
+
+    grid-template-columns:1fr;
+
+}
+
+
+
+.contacto{
+
+    grid-template-columns:1fr;
+
+}
+
+
+
 .navbar{
 
     flex-direction:column;
@@ -519,40 +936,24 @@ footer p{
 
 .navbar ul{
 
-    flex-direction:column;
+    flex-wrap:wrap;
 
-    text-align:center;
-
-}
-
+    justify-content:center;
 
 }
 
 
 
-
-/* ===========================
- RESPONSIVE CELULAR
-=========================== */
-
-
-@media(max-width:480px){
-
-
-.hero-text h1{
-
-    font-size:35px;
-
 }
 
 
 
-.hero-text p{
+/* ==========================
+   RESPONSIVE CELULAR
+========================== */
 
-    font-size:16px;
 
-}
-
+@media(max-width:600px){
 
 
 .logo{
@@ -563,9 +964,62 @@ footer p{
 
 
 
-.card img{
+.navbar ul{
 
-    height:200px;
+    flex-direction:column;
+
+    gap:15px;
+
+}
+
+
+
+.hero{
+
+    padding:50px 5%;
+
+}
+
+
+
+.hero-text h1{
+
+    font-size:35px;
+
+}
+
+
+
+.titulo-pagina h1{
+
+    font-size:35px;
+
+}
+
+
+
+.pasos{
+
+    grid-template-columns:1fr;
+
+}
+
+
+
+.formulario,
+.form-contacto{
+
+    width:95%;
+
+    padding:30px 20px;
+
+}
+
+
+
+.contacto{
+
+    padding:40px 5%;
 
 }
 
@@ -573,9 +1027,10 @@ footer p{
 
 footer{
 
-    padding:30px 15px;
+    padding:35px 15px;
 
 }
+
 
 
 }

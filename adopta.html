@@ -8,329 +8,192 @@
 
 <title>Adopta | KIZUNA</title>
 
-
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
 
 <!-- Bootstrap -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
 
-
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
 
 <!-- AOS -->
 <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
-
-<!-- CSS -->
 <link rel="stylesheet" href="css/style.css">
-
 
 </head>
 
-
-
 <body>
-
-
 
 <header>
 
 <nav class="navbar">
 
-
 <div class="logo">
-🐾 KIZUNA
+🐾 <span>KIZUNA</span>
 </div>
-
-
 
 <ul>
 
 <li><a href="index.html">Inicio</a></li>
-
 <li><a href="mascotas.html">Mascotas</a></li>
-
 <li><a href="adopta.html">Adopta</a></li>
-
 <li><a href="donaciones.html">Donaciones</a></li>
-
 <li><a href="contacto.html">Contacto</a></li>
 
 </ul>
-
-
 
 </nav>
 
 </header>
 
+<section class="titulo-pagina" data-aos="fade-down">
 
-
-
-
-
-<section class="hero" data-aos="fade-up">
-
-
-<div class="hero-text">
-
-
-<h1>
-Proceso de Adopción
-</h1>
-
+<h1>Proceso de Adopción</h1>
 
 <p>
-Adoptar es brindar una segunda oportunidad.
-Sigue estos pasos para encontrar a tu nuevo mejor amigo.
+
+Adoptar significa brindar una segunda oportunidad. Sigue estos pasos para encontrar a tu nuevo mejor amigo.
+
 </p>
-
-
-</div>
-
 
 </section>
 
-
-
-
-
-
-<section class="pasos" data-aos="zoom-in">
-
+<section class="pasos" data-aos="fade-up">
 
 <div class="paso">
 
-<h2>
-1️⃣ Elige una mascota
-</h2>
+<i class="fa-solid fa-paw fa-3x mb-3 text-warning"></i>
+
+<h2>1. Elige</h2>
 
 <p>
-Revisa nuestras mascotas disponibles y selecciona la que mejor se adapte a tu hogar.
+
+Explora nuestras mascotas disponibles y encuentra la ideal para ti.
+
 </p>
 
 </div>
 
-
-
-
 <div class="paso">
 
-<h2>
-2️⃣ Completa el formulario
-</h2>
+<i class="fa-solid fa-file-signature fa-3x mb-3 text-warning"></i>
+
+<h2>2. Solicita</h2>
 
 <p>
-Llena tus datos para que podamos conocerte mejor.
+
+Completa el formulario con tus datos y la mascota que deseas adoptar.
+
 </p>
 
 </div>
 
-
-
-
 <div class="paso">
 
-<h2>
-3️⃣ Entrevista
-</h2>
+<i class="fa-solid fa-comments fa-3x mb-3 text-warning"></i>
+
+<h2>3. Entrevista</h2>
 
 <p>
-Nuestro equipo evaluará la solicitud y resolverá tus dudas.
+
+Nuestro equipo revisará tu solicitud y resolverá cualquier consulta.
+
 </p>
 
 </div>
 
-
-
-
 <div class="paso">
 
-<h2>
-4️⃣ ¡Llévala a casa!
-</h2>
+<i class="fa-solid fa-house-heart fa-3x mb-3 text-warning"></i>
+
+<h2>4. Bienvenido a casa</h2>
 
 <p>
-Una vez aprobada la adopción, podrás comenzar una nueva historia junto a tu mascota.
+
+Si la solicitud es aprobada, podrás llevar a tu nuevo compañero a casa.
+
 </p>
 
 </div>
-
-
 
 </section>
 
+<section class="formulario" data-aos="zoom-in">
 
-
-
-
-
-
-<section class="formulario" data-aos="fade-left">
-
-
-<h2>
-Formulario de Adopción
-</h2>
-
-
-
+<h2>Formulario de Adopción</h2>
 
 <form>
 
+<input type="text" placeholder="👤 Nombre completo" required>
 
+<input type="email" placeholder="📧 Correo electrónico" required>
 
-<input 
-type="text" 
-placeholder="Nombre completo" 
-required>
-
-
-
-<input 
-type="email" 
-placeholder="Correo electrónico" 
-required>
-
-
-
-<input 
-type="tel" 
-placeholder="Celular" 
-required>
-
-
-
+<input type="tel" placeholder="📱 Celular" required>
 
 <select required>
 
+<option value="">🐾 Selecciona una mascota</option>
 
-<option value="">
-Mascota de interés
-</option>
+<option>Max</option>
 
+<option>Luna</option>
 
-<option>
-Max
-</option>
-
-
-<option>
-Luna
-</option>
-
-
-<option>
-Toby
-</option>
-
+<option>Toby</option>
 
 </select>
 
+<textarea rows="6" placeholder="💬 Cuéntanos por qué deseas adoptar"></textarea>
 
+<button type="submit" class="btn btn-success btn-lg">
 
-
-
-<textarea 
-placeholder="¿Por qué deseas adoptar?"
-rows="6">
-</textarea>
-
-
-
-
-
-<button 
-type="submit" 
-class="btn btn-success">
+<i class="fa-solid fa-paper-plane"></i>
 
 Enviar Solicitud
 
 </button>
 
-
-
-
 </form>
-
 
 </section>
 
-
-
-
-
-
-
 <footer>
 
+<h2>🐾 KIZUNA</h2>
 
-<h2>
-KIZUNA
-</h2>
-
-
-<p>
-Vínculos que duran para siempre 🐾
-</p>
-
-
+<p>Vínculos que duran para siempre.</p>
 
 <div class="redes">
 
+<i class="fab fa-facebook"></i>
 
-<i class="fa-brands fa-facebook"></i>
+<i class="fab fa-instagram"></i>
 
-<i class="fa-brands fa-instagram"></i>
-
-<i class="fa-brands fa-tiktok"></i>
-
+<i class="fab fa-tiktok"></i>
 
 </div>
 
-
-
 <p>
-© 2026 Todos los derechos reservados.
+
+© 2026 KIZUNA | Centro de Adopción de Mascotas
+
 </p>
-
-
 
 </footer>
 
-
-
-
-
-
-
-<!-- Bootstrap -->
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
-
-
-
-<!-- AOS -->
 
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
-
-
 <script>
 
-AOS.init();
+AOS.init({
+duration:900,
+once:true
+});
 
 </script>
-
-
-
-<script src="js/script.js"></script>
-
-
 
 </body>
 
